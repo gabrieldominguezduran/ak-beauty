@@ -1,0 +1,58 @@
+---
+// src/components/ProductCard.astro
+interface Props {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
+const { name, description, price, image } = Astro.props;
+---
+
+<article class="product-card">
+  <img src={image} alt={name} />
+  <div class="product-info">
+    <h2>{name}</h2>
+    <p>{description}</p>
+    <span>${price}</span>
+  </div>
+</article>
+
+<style>
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-info {
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  .product-info h2 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  .product-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+
+  .product-info span {
+    font-weight: bold;
+    color: #333;
+  }
+</style>

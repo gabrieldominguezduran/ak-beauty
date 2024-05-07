@@ -1,0 +1,107 @@
+---
+import ProductCard from "./ProductCard.astro";
+import ProductDetail from "./ProductDetail.astro";
+
+const products = [
+  {
+    id: 1,
+    name: "Product 1",
+    description: "Lorem ipsum dolor sit amet",
+    price: 100,
+    image: "images/test.jpg",
+  },
+  {
+    id: 2,
+    name: "Product 2",
+    description: "Lorem ipsum dolor sit amet",
+    price: 100,
+    image: "images/test.jpg",
+  },
+  {
+    id: 3,
+    name: "Product 3",
+    description: "Lorem ipsum dolor sit amet",
+    price: 100,
+    image: "images/test.jpg",
+  },
+  {
+    id: 4,
+    name: "Product 4",
+    description: "Lorem ipsum dolor sit amet",
+    price: 100,
+    image: "images/test.jpg",
+  },
+  // Add more products as needed
+];
+---
+
+<div class="gallery" data-products={JSON.stringify(products)}>
+  {
+    products.map((product) => (
+      <div data-product-id={product.id} class="product-card">
+        <ProductCard
+          id={product.id}
+          name={product.name}
+          description={product.description}
+          price={product.price}
+          image={product.image}
+        />
+      </div>
+    ))
+  }
+</div>
+<ProductDetail />
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryElement = document.querySelector(".gallery");
+    const products = galleryElement
+      ? JSON.parse(galleryElement.getAttribute("data-products"))
+      : [];
+
+    const cards = document.querySelectorAll(".product-card");
+    cards.forEach((card) => {
+      card.addEventListener("click", function () {
+        const productId = parseInt(this.getAttribute("data-product-id"));
+        const product = products.find((p) => p.id === productId);
+        console.log("product", product);
+        if (product) {
+          declare global {
+            interface Window {
+              setProductDetail: (product: any, flag: boolean) => void;
+            }
+          }
+
+          window.setProductDetail(product, true);
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  @media (max-width: 1200px) {
+    .gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+</style>
