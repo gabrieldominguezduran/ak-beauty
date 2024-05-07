@@ -53,30 +53,48 @@ const products = [
 <ProductDetail />
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const galleryElement = document.querySelector(".gallery");
-    const products = galleryElement
-      ? JSON.parse(galleryElement.getAttribute("data-products"))
-      : [];
+  document.addEventListener("DOMContentLoaded", () => {
+    const gallery = document.querySelector(".gallery");
+    const products = JSON.parse(gallery.getAttribute("data-products"));
 
     const cards = document.querySelectorAll(".product-card");
     cards.forEach((card) => {
       card.addEventListener("click", function () {
         const productId = parseInt(this.getAttribute("data-product-id"));
         const product = products.find((p) => p.id === productId);
-        console.log("product", product);
-        if (product) {
-          declare global {
-            interface Window {
-              setProductDetail: (product: any, flag: boolean) => void;
-            }
-          }
 
-          window.setProductDetail(product, true);
+        if (product) {
+          const detailOverlay = document.getElementById(
+            "product-detail-overlay"
+          );
+          detailOverlay.style.display = "flex";
+          const productImage = document.querySelector(
+            ".product-detail img"
+          ) as HTMLImageElement;
+          productImage.src = product.image;
+          productImage.alt = product.name;
+          document.querySelector(".product-detail h1").textContent =
+            product.name;
+          document.querySelector(".product-detail p").textContent =
+            product.description;
+          document.querySelector(".product-detail span").textContent =
+            `$${product.price}`;
         }
       });
     });
   });
+
+  function closeDetail() {
+    document.getElementById("product-detail-overlay").style.display = "none";
+  }
+
+  declare global {
+    interface Window {
+      closeDetail: () => void;
+    }
+  }
+
+  window.closeDetail = closeDetail;
 </script>
 
 <style>
