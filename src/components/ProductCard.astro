@@ -26,7 +26,7 @@ const { name, description, price, image } = Astro.props;
     border: 1px solid #ccc;
     padding: 1rem;
     margin-bottom: 1rem;
-    background-color: #fab0d9;
+    background-color: transparent;
     cursor: pointer;
   }
 
@@ -38,6 +38,7 @@ const { name, description, price, image } = Astro.props;
   .product-info {
     padding: 0.5rem;
     text-align: center;
+    background-color: var(--main-pink);
   }
 
   .product-info h2 {

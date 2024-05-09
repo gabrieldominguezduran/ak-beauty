@@ -1,4 +1,7 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
   description: string;
@@ -13,7 +16,7 @@ const { title, description } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="images/AK_Fashion_Logo.png" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <meta name="generator" content={Astro.generator} />
     <link
       rel="stylesheet"
@@ -21,8 +24,11 @@ const { title, description } = Astro.props;
     />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
+    <Nav />
     <slot />
+    <Footer />
   </body>
 </html>
