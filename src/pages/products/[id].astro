@@ -1,0 +1,181 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import products from "../../content/products.json";
+
+export function getStaticPaths() {
+  return products.map(({ id }) => ({ params: { id } }));
+}
+
+const { id } = Astro.params;
+const product = products.find((product) => product.id === Number(id));
+---
+
+<Layout
+  title="AK Boutique Online Shop"
+  description="Discover the latest trends at Poland's premier fashion destination! Shop our exclusive collection of stylish apparel and accessories for every occasion. Elevate your wardrobe with top-quality, fashionable pieces. Fast shipping across Poland. Shop now and embrace your unique style!"
+>
+  <main transition:name={`photo-${String(product.id)}`} class="product-detail">
+    <a class="back-btn" href="/">X</a>
+    <div class="product-display">
+      <img src={product.image} alt={product.name} />
+      <div class="product-info">
+        <h1>{product.name}</h1>
+        <p>{product.description}</p>
+        <div class="price-and-cart">
+          <span class="product-price">${product.price}</span>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    .product-detail {
+      background: var(--main-pink);
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      max-width: fit-content;
+      width: 80%;
+      height: auto;
+      margin: 1rem auto;
+      overflow: hidden;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 3rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .back-btn:hover,
+    .back-btn:focus,
+    .back-btn:active,
+    .back-btn:visited {
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product-display {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 40%;
+      height: auto;
+    }
+
+    .product-info {
+      width: 50%;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product-title {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      color: #666;
+      margin: 1rem 0;
+    }
+
+    .price-and-cart {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .product-price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    button {
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 1200px) {
+      .product-detail {
+        padding: 0.8rem;
+        margin: 1rem auto;
+      }
+
+      .back-btn {
+        font-size: 1.8rem;
+      }
+    }
+
+    .price-and-cart {
+      margin-top: 1.5rem;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .product-price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .add-to-cart-btn {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .product-detail {
+        padding: 1rem;
+        flex-direction: column;
+      }
+      .product-display {
+        flex-direction: column;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .product-detail {
+        width: 90%;
+        height: auto;
+        padding: 0.5rem;
+        flex-direction: column;
+      }
+
+      .product-info {
+        text-align: center;
+        padding: 10px;
+      }
+    }
+  </style>
+</Layout>

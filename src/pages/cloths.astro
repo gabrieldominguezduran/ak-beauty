@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="AK Boutique Online Shop"
+  description="Discover the latest trends at Poland's premier fashion destination! Shop our exclusive collection of stylish apparel and accessories for every occasion. Elevate your wardrobe with top-quality, fashionable pieces. Fast shipping across Poland. Shop now and embrace your unique style!"
+>
+  <main transition:animate="slide">
+    <h1>Cloths</h1>
+    <a class="btn-home" href="/">Home</a>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  h1 {
+    font-size: 10rem;
+  }
+
+  .btn-home {
+    font-size: 2rem;
+    color: inherit;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+
+  .btn-home:hover,
+  .btn-home:focus,
+  .btn-home:visited,
+  .btn-home:active {
+    background-color: var(--main-pink);
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+</style>

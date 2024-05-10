@@ -7,15 +7,17 @@ interface Props {
   price: number;
   image: string;
 }
-const { name, description, price, image } = Astro.props;
+const { id, name, description, price, image } = Astro.props;
 ---
 
-<article class="product-card">
-  <img src={image} alt={name} />
-  <div class="product-info">
-    <h2>{name}</h2>
-    <p>{description}</p>
-    <span>${price}</span>
+<article transition:name={`photo-${String(id)}`} class="product-card">
+  <div>
+    <img src=`${image}` alt={name} />
+    <div class="product-info">
+      <h2>{name}</h2>
+      <p>{description}</p>
+      <span>${price}</span>
+    </div>
   </div>
 </article>
 
@@ -23,22 +25,25 @@ const { name, description, price, image } = Astro.props;
   .product-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
     padding: 1rem;
     margin-bottom: 1rem;
-    background-color: transparent;
     cursor: pointer;
   }
 
   .product-card img {
     width: 100%;
     height: auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
 
   .product-info {
+    margin-top: -0.313rem;
     padding: 0.5rem;
     text-align: center;
     background-color: var(--main-pink);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   .product-info h2 {

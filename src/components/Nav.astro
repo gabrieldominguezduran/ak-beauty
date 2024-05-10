@@ -4,9 +4,11 @@
 
 <header>
   <ul>
-    <li><img src="images/logo.png" alt="Logo" class="logo" /></li>
-    <li>Cloths</li>
-    <li>Fashion</li>
+    <a href="/"
+      ><li><img src="/images/logo.png" alt="Logo" class="logo" /></li></a
+    >
+    <a href="/cloths"><li>Cloths</li></a>
+    <a href="/fashion"><li>Fashion</li></a>
   </ul>
 </header>
 <style>
@@ -37,6 +39,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
 
   header ul li {
@@ -46,6 +49,18 @@
     padding: 0 1rem;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  header a,
+  header a:visited {
+    text-decoration: none;
+    color: #333;
+  }
+
+  header a:hover {
+    background-color: var(--main-pink);
+    padding: 0.5rem 0;
+    border-radius: 10px;
   }
 
   .logo {
