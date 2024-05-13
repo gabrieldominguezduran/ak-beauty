@@ -2,28 +2,37 @@
 
 ---
 
-<section class="hero">
-  <div class="hero-content">
-    <!-- Content can be added here if needed -->
+<div class="container">
+  <div class="hero">
+    <img src="/images/logo.png" alt="logo" width="100" height="100" />
+    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
   </div>
-  <!-- <img src="images/logo.png" alt="header photo" class="logo" /> -->
-</section>
-
+</div>
 <style>
+  .container {
+    margin-bottom: 2rem;
+    padding-top: 100px;
+  }
   .hero {
-    background-image: linear-gradient(
-        to right,
-        rgba(255, 192, 203, 0.3),
-        rgba(255, 192, 203, 0.3)
-      ),
-      url("/images/bck.jpg"); /* Adding a pink color overlay */
-    background-blend-mode: multiply; /* Blends the background color and the image */
-    background-position: left;
-    background-size: cover;
-    height: 200px;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--main-pink);
+    height: 100px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .logo {
-    width: 200px;
+  .hero a {
+    color: var(--main-dark);
+    align-self: end;
+    font-size: 1.5rem;
+    margin: 1rem;
+    margin-right: 3rem;
   }
 </style>
