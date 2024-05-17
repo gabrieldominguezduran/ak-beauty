@@ -1,5 +1,7 @@
 ---
 // src/components/ProductCard.astro
+import { Image } from "astro:assets";
+import testImg from "../images/test.jpg";
 interface Props {
   id: number;
   name: string;
@@ -12,7 +14,7 @@ const { id, name, description, price, image } = Astro.props;
 
 <article transition:name={`photo-${String(id)}`} class="product-card">
   <div>
-    <img src=`${image}` alt={name} />
+    <Image src={testImg} alt={name} />
     <div class="product-info">
       <h2>{name}</h2>
       <p>{description}</p>
@@ -41,7 +43,7 @@ const { id, name, description, price, image } = Astro.props;
     margin-top: -0.313rem;
     padding: 0.5rem;
     text-align: center;
-    background-color: var(--pink);
+    background-color: var(--main-pink);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
   }
@@ -53,12 +55,12 @@ const { id, name, description, price, image } = Astro.props;
 
   .product-info p {
     font-size: 1rem;
-    color: #666;
+    color: var(--secondary-dark);
     margin-bottom: 0.5rem;
   }
 
   .product-info span {
     font-weight: bold;
-    color: #333;
+    color: var(--main-dark);
   }
 </style>

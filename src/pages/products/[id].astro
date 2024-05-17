@@ -1,6 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import products from "../../content/products.json";
+import testImg from "../../images/test.jpg";
 
 export function getStaticPaths() {
   return products.map(({ id }) => ({ params: { id } }));
@@ -17,7 +19,7 @@ const product = products.find((product) => product.id === Number(id));
   <main transition:name={`photo-${String(product.id)}`} class="product-detail">
     <a class="back-btn" href="/">X</a>
     <div class="product-display">
-      <img src={product.image} alt={product.name} />
+      <Image src={testImg} alt={product.name} />
       <div class="product-info">
         <h1>{product.name}</h1>
         <p>{product.description}</p>
@@ -31,7 +33,7 @@ const product = products.find((product) => product.id === Number(id));
 
   <style>
     .product-detail {
-      background: var(--light);
+      background: var(--main-pink);
       padding: 1.5rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -78,23 +80,25 @@ const product = products.find((product) => product.id === Number(id));
       height: auto;
     }
 
+    .product-info h1 {
+      font-size: 2rem;
+      color: var(--main-dark);
+    }
+
     .product-info {
       width: 50%;
       padding-left: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      font-size: 1rem;
+      color: var(--secondary-dark);
+      margin: 1rem 0;
     }
 
     .product-title {
       font-size: 1.5rem;
-      color: #333;
-    }
-
-    .product-description {
-      font-size: 1rem;
-      color: #666;
-      margin: 1rem 0;
+      color: var(--main-dark);
     }
 
     .price-and-cart {
@@ -107,14 +111,16 @@ const product = products.find((product) => product.id === Number(id));
     .product-price {
       font-size: 1.2rem;
       font-weight: bold;
-      color: #333;
+      color: var(--main-dark);
     }
 
-    button {
+    .add-to-cart-btn {
+      background-color: var(--main-white);
+      color: var(--main-dark);
       border: none;
       padding: 10px 20px;
-      margin-top: 10px;
       cursor: pointer;
+      border-radius: 5px;
     }
 
     @media (max-width: 1200px) {
@@ -138,16 +144,7 @@ const product = products.find((product) => product.id === Number(id));
     .product-price {
       font-size: 1.2rem;
       font-weight: bold;
-      color: #333;
-    }
-
-    .add-to-cart-btn {
-      background-color: var(--pink);
-      color: var(--dark);
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
+      color: var(--main-dark);
     }
 
     @media (max-width: 768px) {
