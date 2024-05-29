@@ -22,11 +22,12 @@ const product = products.find((product) => product.id === Number(id));
       <Image src={testImg} alt={product.name} />
       <div class="product-info">
         <h1>{product.name}</h1>
-        <p>{product.description}</p>
-        <div class="price-and-cart">
-          <span class="product-price">${product.price}</span>
-          <button class="add-to-cart-btn">Add to Cart</button>
-        </div>
+        <p class="description">{product.description}</p>
+      </div>
+      <div class="price-and-cart">
+        <span class="product-price">${product.price}</span>
+        <button class="add-to-cart-btn" id="add-to-cart-btn">Add to Cart</button
+        >
       </div>
     </div>
   </main>
@@ -69,43 +70,51 @@ const product = products.find((product) => product.id === Number(id));
     }
 
     .product-display {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 1rem;
       width: 100%;
-      align-items: center;
-      justify-content: center;
+      height: 100%;
     }
 
     img {
-      max-width: 40%;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+      place-self: center;
+      max-width: 100%;
       height: auto;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: var(--secondary-dark);
+      margin: 0 3rem;
+    }
+
+    .product-info {
+      grid-column: 2 / -1;
+      grid-row: 1 / -1;
+      font-size: 1rem;
+      color: var(--secondary-dark);
+      padding: 2rem;
     }
 
     .product-info h1 {
       font-size: 2rem;
       color: var(--main-dark);
-    }
-
-    .product-info {
-      width: 50%;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 1rem;
-      color: var(--secondary-dark);
-      margin: 1rem 0;
-    }
-
-    .product-title {
-      font-size: 1.5rem;
-      color: var(--main-dark);
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
     .price-and-cart {
-      align-items: center;
+      grid-column: 2 / -1;
+      grid-row: 2 / -1;
+      align-items: end;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
+      margin-bottom: 2rem;
     }
 
     .product-price {
@@ -123,55 +132,47 @@ const product = products.find((product) => product.id === Number(id));
       border-radius: 5px;
     }
 
-    @media (max-width: 1200px) {
+    .add-to-cart-btn:hover {
+      background-color: var(--main-dark);
+      color: var(--main-white);
+    }
+
+    @media (max-width: 1050px) {
       .product-detail {
-        padding: 0.8rem;
-        margin: 1rem auto;
-      }
-
-      .back-btn {
-        font-size: 1.8rem;
-      }
-    }
-
-    .price-and-cart {
-      margin-top: 1.5rem;
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .product-price {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--main-dark);
-    }
-
-    @media (max-width: 768px) {
-      .product-detail {
-        padding: 1rem;
-        flex-direction: column;
+        width: 90%;
       }
       .product-display {
+        display: flex;
         flex-direction: column;
+        overflow-y: auto;
       }
 
       img {
-        max-width: 100%;
+        width: 50%;
       }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       .product-detail {
         width: 90%;
-        height: auto;
-        padding: 0.5rem;
+        min-height: 100vh;
+      }
+      .product-display {
+        display: flex;
         flex-direction: column;
+        overflow-y: auto;
+      }
+
+      img {
+        width: 100%;
       }
 
       .product-info {
-        text-align: center;
-        padding: 10px;
+        padding: 0.5rem;
+      }
+
+      .description {
+        margin: 0;
       }
     }
   </style>

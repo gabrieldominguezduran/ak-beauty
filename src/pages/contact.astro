@@ -7,13 +7,14 @@ import Layout from "../layouts/Layout.astro";
   description="Discover the latest trends at Poland's premier fashion destination! Shop our exclusive collection of stylish apparel and accessories for every occasion. Elevate your wardrobe with top-quality, fashionable pieces. Fast shipping across Poland. Shop now and embrace your unique style!"
 >
   <main>
-    <h1>Cloths</h1>
+    <h1>Contact</h1>
     <a class="btn-home" href="/">Home</a>
   </main>
 </Layout>
 
 <style>
   main {
+    min-width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -30,18 +31,19 @@ import Layout from "../layouts/Layout.astro";
     margin-top: 1rem;
   }
 
-  .btn-home:hover,
+  .btn-home:hover {
+    color: var(--main-pink);
+  }
   .btn-home:focus,
   .btn-home:visited,
   .btn-home:active {
-    background-color: var(--main-pink);
-    padding: 0.5rem 1rem;
-    margin: 0 1rem;
     text-decoration: none;
-    border-radius: 10px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1050px) {
+    main {
+      min-width: 100vw;
+    }
     h1 {
       font-size: 5rem;
     }

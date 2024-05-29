@@ -2,56 +2,64 @@
   {
     "id": 1,
     "name": "Product 1",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   },
   {
     "id": 2,
     "name": "Product 2",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   },
   {
     "id": 3,
     "name": "Product 3",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   },
   {
     "id": 4,
     "name": "Product 4",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   },
   {
     "id": 5,
     "name": "Product 1",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   },
   {
     "id": 6,
     "name": "Product 2",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   },
   {
     "id": 7,
     "name": "Product 3",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   },
   {
     "id": 8,
     "name": "Product 4",
-    "description": "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis. Molestias facilis laboriosam neque corrupti nisi veniam id harum, odio optio esse pariatur aliquid nam expedita dolores aut assumenda eum non error sed et eligendi. Minus a magni aliquam consectetur eos adipisci laudantium consequatur sit, aut corporis, veritatis quos eligendi quisquam eum? Odio tempora alias sint quidem optio cum fugiat doloribus ducimus et corrupti. Provident fuga aliquam deleniti nemo, ipsa eos quia ad! Dolore, alias provident.",
     "price": 100,
     "image": "/images/test.jpg"
   }
