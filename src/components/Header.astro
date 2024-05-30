@@ -1,9 +1,145 @@
 ---
-import Hero from "./Hero.astro";
+// src/components/Header.astro
+import { Image } from "astro:assets";
+import pinkLogo from "../images/logo_pink.png";
 ---
 
-<header>
-  <Hero />
+<header class="container">
+  <div class="hero">
+    <button class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <Image class="logo" src={pinkLogo} alt="logo" width="150" height="150" />
+    <div class="cart">
+      <button>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="menu" id="menu">
+    <div class="menu-content">
+      <button class="close-menu" id="close-menu">
+        <i class="fa-solid fa-times"></i>
+      </button>
+      <div class="menu-links">
+        <a href="/contact">Contact</a>
+        <a href="/terms">Terms</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
 </header>
 
-<style></style>
+<style>
+  .hero {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: var(--main-pink);
+    height: 150px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .logo {
+    margin-left: 2rem;
+  }
+
+  .cart {
+    position: relative;
+    display: flex;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero .cart button {
+    color: var(--main-dark);
+    align-self: end;
+    font-size: 1.5rem;
+    margin: 1rem;
+    margin-right: 3rem;
+  }
+
+  .cart-count {
+    position: absolute;
+    top: 0.2rem;
+    right: 2.5rem;
+    background-color: white;
+    color: grey;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+    border: 1px solid grey;
+  }
+
+  .hamburger {
+    font-size: 1.5rem;
+    color: var(--main-dark);
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    background: var(--main-pink);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+
+  .menu.expanded {
+    left: 0;
+  }
+
+  .menu-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    font-size: 1.5rem;
+    color: var(--main-dark);
+  }
+
+  .menu-links a,
+  .social-icons a {
+    display: block;
+    color: var(--main-dark);
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu-links a:hover,
+  .social-icons a:hover {
+    color: var(--main-white);
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+  }
+</style>
+<script src="/src/scripts/menuToggle.js"></script>

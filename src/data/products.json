@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test2.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test3.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Product 5",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Product 6",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test1.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Product 7",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test2.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Product 8",
+    "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
+    "price": 100,
+    "image": "/src/images/test3.jpg"
+  }
+]
