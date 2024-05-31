@@ -4,6 +4,7 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import products from "../../data/products.json";
+import AddToCartForm from "../../components/cart/AddToCartButton";
 
 export function getStaticPaths() {
   return products.map(({ id }) => ({ params: { id } }));
@@ -41,9 +42,12 @@ if (!images[product.image])
         <div class="price-and-cart">
           <span class="product-price">Price: ${product.price}</span>
           <div class="buttons">
-            <button class="add-to-cart-btn" id="add-to-cart-btn"
-              >Add to Cart</button
-            >
+            <AddToCartForm item={product} client:load>
+              <button type="submit" class="add-to-cart-btn" id="add-to-cart-btn"
+                >Add to Cart</button
+              >
+            </AddToCartForm>
+
             <button class="buy-btn"
               >Buy <span><i class="fa-regular fa-heart"></i></span></button
             >
