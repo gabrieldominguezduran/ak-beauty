@@ -2,6 +2,7 @@
 // src/components/Header.astro
 import { Image } from "astro:assets";
 import pinkLogo from "../images/logo_white.png";
+import CartButton from "./cart/CartButton";
 ---
 
 <header class="container">
@@ -10,12 +11,7 @@ import pinkLogo from "../images/logo_white.png";
       <i class="fa-solid fa-bars"></i>
     </button>
     <Image class="logo" src={pinkLogo} alt="logo" width="200" height="200" />
-    <div class="cart">
-      <button>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span class="cart-count" id="cart-count">0</span>
-      </button>
-    </div>
+    <CartButton client:load />
   </div>
 
   <nav class="menu" id="menu" transition:persist="header">
@@ -56,37 +52,12 @@ import pinkLogo from "../images/logo_white.png";
     mix-blend-mode: multiply;
   }
 
-  .cart {
-    position: relative;
-    display: flex;
-  }
-
   button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
-  }
-
-  .hero .cart button {
-    color: var(--main-dark);
-    align-self: end;
-    font-size: 1.5rem;
-    margin: 1rem;
-    margin-right: 1rem;
-  }
-
-  .cart-count {
-    position: absolute;
-    top: 0.2rem;
-    right: 0.5rem;
-    background-color: white;
-    color: grey;
-    border-radius: 50%;
-    padding: 0.2rem 0.4rem;
-    font-size: 0.6rem;
-    border: 1px solid grey;
   }
 
   .hamburger {
