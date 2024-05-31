@@ -29,7 +29,7 @@ if (!images[image])
   <div class="product-info">
     <h2>{name}</h2>
     <p>{description}</p>
-    <span>${price}</span>
+    <span>Price: ${price}</span>
   </div>
 </article>
 
@@ -72,16 +72,17 @@ if (!images[image])
 
   .product-info h2 {
     margin: 0.5rem 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .product-info p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: var(--secondary-dark);
-    margin-bottom: 0.5rem;
+    margin: 0;
   }
 
   .product-info span {
+    font-size: 0.8rem;
     font-weight: bold;
     color: var(--main-dark);
   }

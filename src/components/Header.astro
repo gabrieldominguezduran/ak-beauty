@@ -1,7 +1,7 @@
 ---
 // src/components/Header.astro
 import { Image } from "astro:assets";
-import pinkLogo from "../images/logo_pink.png";
+import pinkLogo from "../images/logo_white.png";
 ---
 
 <header class="container">
@@ -9,7 +9,7 @@ import pinkLogo from "../images/logo_pink.png";
     <button class="hamburger" id="hamburger">
       <i class="fa-solid fa-bars"></i>
     </button>
-    <Image class="logo" src={pinkLogo} alt="logo" width="150" height="150" />
+    <Image class="logo" src={pinkLogo} alt="logo" width="200" height="200" />
     <div class="cart">
       <button>
         <i class="fa-solid fa-cart-shopping"></i>
@@ -18,7 +18,7 @@ import pinkLogo from "../images/logo_pink.png";
     </div>
   </div>
 
-  <nav class="menu" id="menu">
+  <nav class="menu" id="menu" transition:persist="header">
     <div class="menu-content">
       <button class="close-menu" id="close-menu">
         <i class="fa-solid fa-times"></i>
@@ -26,6 +26,7 @@ import pinkLogo from "../images/logo_pink.png";
       <div class="menu-links">
         <a href="/contact">Contact</a>
         <a href="/terms">Terms</a>
+        <a href="/">Home</a>
       </div>
       <div class="social-icons">
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -42,7 +43,7 @@ import pinkLogo from "../images/logo_pink.png";
     max-width: 1500px;
     margin: 0 auto;
     background-color: var(--main-pink);
-    height: 150px;
+    height: 100px;
     z-index: 5;
     display: flex;
     justify-content: space-between;
@@ -52,6 +53,7 @@ import pinkLogo from "../images/logo_pink.png";
 
   .logo {
     margin-left: 2rem;
+    mix-blend-mode: multiply;
   }
 
   .cart {
@@ -72,13 +74,13 @@ import pinkLogo from "../images/logo_pink.png";
     align-self: end;
     font-size: 1.5rem;
     margin: 1rem;
-    margin-right: 3rem;
+    margin-right: 1rem;
   }
 
   .cart-count {
     position: absolute;
     top: 0.2rem;
-    right: 2.5rem;
+    right: 0.5rem;
     background-color: white;
     color: grey;
     border-radius: 50%;
@@ -142,4 +144,3 @@ import pinkLogo from "../images/logo_pink.png";
     justify-content: space-around;
   }
 </style>
-<script src="/src/scripts/menuToggle.js"></script>
