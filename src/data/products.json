@@ -5,7 +5,8 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test.jpg"
+    "image": "/src/images/test.jpg",
+    "image_public": "/images/test.jpg"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test1.jpg"
+    "image": "/src/images/test1.jpg",
+    "image_public": "/images/test1.jpg"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test2.jpg"
+    "image": "/src/images/test2.jpg",
+    "image_public": "/images/test2.jpg"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test3.jpg"
+    "image": "/src/images/test3.jpg",
+    "image_public": "/images/test3.jpg"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test.jpg"
+    "image": "/src/images/test.jpg",
+    "image_public": "/images/test.jpg"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test1.jpg"
+    "image": "/src/images/test1.jpg",
+    "image_public": "/images/test1.jpg"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test2.jpg"
+    "image": "/src/images/test2.jpg",
+    "image_public": "/images/test2.jpg"
   },
   {
     "id": 8,
@@ -61,6 +68,7 @@
     "description_short": "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur est nulla unde quae vero iure debitis natus quisquam quaerat nobis facere sit accusamus, cum alias iusto dignissimos illo rem vitae a, nostrum, ea veritatis.",
     "price": 100,
-    "image": "/src/images/test3.jpg"
+    "image": "/src/images/test3.jpg",
+    "image_public": "/images/test3.jpg"
   }
 ]
