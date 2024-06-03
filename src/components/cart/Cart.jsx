@@ -24,9 +24,14 @@ export default function Cart() {
         {Object.values($cartItems).map((cartItem) => (
           <li key={cartItem.id}>
             <img src={cartItem.image} alt={cartItem.name} width="50" />
-            <h3>{cartItem.name}</h3>
-            <p>Quantity: {cartItem.quantity}</p>
-            <button onClick={() => removeCartItem(cartItem.id)}>Delete</button>
+            <h4>{cartItem.name}</h4>
+            <p>{cartItem.quantity}</p>
+            <button
+              className="trash-btn"
+              onClick={() => removeCartItem(cartItem.id)}
+            >
+              <i class="fa-regular fa-trash-can"></i>{" "}
+            </button>
           </li>
         ))}
       </ul>

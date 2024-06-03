@@ -25,11 +25,10 @@ export function addCartItem({ id, name, image }) {
   }
 }
 
-// Update the `removeCartItem` function in your cart store
 export const removeCartItem = (id) => {
   cartItems.set(
     Object.fromEntries(
-      Object.entries(cartItems.get()).filter(([key]) => key !== id)
+      Object.entries(cartItems.get()).filter(([key]) => key !== String(id))
     )
   );
 };

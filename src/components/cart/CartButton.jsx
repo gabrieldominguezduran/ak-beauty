@@ -13,7 +13,7 @@ export default function CartButton() {
 
   return (
     <div className="cart">
-      <button onClick={() => isCartOpen.set(!$isCartOpen)}>
+      <button className="cart-btn" onClick={() => isCartOpen.set(!$isCartOpen)}>
         <i className="fa-solid fa-cart-shopping"></i>
         <span className="cart-count">{totalItems}</span>
       </button>
