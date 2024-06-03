@@ -17,6 +17,7 @@ body.cart-open .cart-slide {
 .cart-slide ul {
   list-style: none;
   padding: 1.25rem;
+  margin: 0;
 }
 
 .cart-slide li {
