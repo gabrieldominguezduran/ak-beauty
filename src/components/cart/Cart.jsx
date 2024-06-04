@@ -6,7 +6,7 @@ import "./cartStyles.css";
 export default function Cart() {
   const $isCartOpen = useStore(isCartOpen);
   const $cartItems = useStore(cartItems);
-  console.log($cartItems);
+
   useEffect(() => {
     if ($isCartOpen) {
       document.body.classList.add("cart-open");
