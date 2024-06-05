@@ -130,7 +130,7 @@ body.cart-open .cart-slide {
   border: 1px solid grey;
   text-align: center;
   place-self: start;
-  margin-left: 0.75rem;
+  margin-left: -0.75rem;
   margin-top: -0.688rem;
 }
 
