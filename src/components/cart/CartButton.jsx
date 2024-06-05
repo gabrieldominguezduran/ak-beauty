@@ -1,6 +1,6 @@
 import { useStore } from "@nanostores/preact";
 import { isCartOpen, cartItems } from "../../stores/cartStore";
-import "./cartStyles.css";
+import "./styles/cartStyles.css";
 
 export default function CartButton() {
   const $isCartOpen = useStore(isCartOpen);

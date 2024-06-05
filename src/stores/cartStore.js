@@ -9,12 +9,13 @@ export const isCartOpen = atom(false);
  * @property {string} image
  * @property {string} image_public
  * @property {number} quantity
+ * @property {number} stock_quantity
  */
 
 /** @type {import('nanostores').MapStore<Record<string, CartItem>>} */
 export const cartItems = map({});
 
-export function addCartItem({ id, name, image, image_public }) {
+export function addCartItem({ id, name, image, image_public, stock_quantity }) {
   const existingEntry = cartItems.get()[id];
   if (existingEntry) {
     cartItems.setKey(id, {
@@ -22,7 +23,14 @@ export function addCartItem({ id, name, image, image_public }) {
       quantity: existingEntry.quantity + 1,
     });
   } else {
-    cartItems.setKey(id, { id, name, image, image_public, quantity: 1 });
+    cartItems.setKey(id, {
+      id,
+      name,
+      image,
+      image_public,
+      stock_quantity,
+      quantity: 1,
+    });
   }
 }
 
@@ -33,4 +41,13 @@ export const removeCartItem = (id) => {
     )
   );
 };
-``;
+
+export const updateCartItemQuantity = (id, newQuantity) => {
+  const item = cartItems.get()[id];
+  if (item) {
+    cartItems.setKey(id, {
+      ...item,
+      quantity: newQuantity,
+    });
+  }
+};
