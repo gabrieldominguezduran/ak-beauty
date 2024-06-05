@@ -84,7 +84,7 @@ body.cart-open .cart-slide {
 }
 
 .checkout-btn {
-  min-width: 20rem;
+  min-width: 15rem;
   background-color: var(--main-pink);
   color: var(--main-dark);
   border: 1px solid var(--main-light);

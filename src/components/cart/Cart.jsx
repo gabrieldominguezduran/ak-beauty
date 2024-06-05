@@ -8,6 +8,7 @@ import {
 } from "../../stores/cartStore";
 import QuantityButton from "./QuantityButton";
 import "./styles/cartStyles.css";
+import "../../styles/global.css";
 
 export default function Cart() {
   const $isCartOpen = useStore(isCartOpen);
