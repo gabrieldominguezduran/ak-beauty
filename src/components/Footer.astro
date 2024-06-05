@@ -1,11 +1,15 @@
 <footer class="footer">
   <div class="footer-content">
-    <div class="footer-column">
-      <a href="/contact">Contact</a>
-      <a href="/terms">Terms</a>
+    <div class="footer-info">
+      <h3>Information</h3>
+      <a href="/about">O nas</a>
+      <a href="/contact">Kontakt</a>
+      <a href="/privacy">Polityka prywatności</a>
+      <a href="/terms">Regulamin</a>
     </div>
     <div class="footer-column">
       <h3>Follow Us</h3>
+
       <div class="social-icons">
         <a href="#"><i class="fa-brands fa-facebook"></i></a>
         <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
@@ -39,10 +43,12 @@
   }
 
   .footer h3 {
+    color: var(--main-light);
     margin-bottom: 0.5rem;
   }
 
-  .footer-column a {
+  .footer-column,
+  .footer-info a {
     display: flex;
     flex-direction: column;
     margin: 0.5rem 0;

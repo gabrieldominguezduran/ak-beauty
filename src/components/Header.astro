@@ -20,8 +20,8 @@ import CartButton from "./cart/CartButton";
         <i class="fa-solid fa-times"></i>
       </button>
       <div class="menu-links">
-        <a href="/contact">Contact</a>
-        <a href="/terms">Terms</a>
+        <a href="/bestseller">Bestseller</a>
+        <a href="/sales">Sales</a>
         <a href="/">Home</a>
       </div>
       <div class="social-icons">
@@ -86,7 +86,7 @@ import CartButton from "./cart/CartButton";
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: 100%;
   }
 
@@ -108,6 +108,11 @@ import CartButton from "./cart/CartButton";
   .menu-links a:hover,
   .social-icons a:hover {
     color: var(--main-white);
+  }
+
+  .menu-links {
+    flex: 1;
+    margin-top: 5rem;
   }
 
   .social-icons {
