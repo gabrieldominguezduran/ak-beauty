@@ -28,7 +28,7 @@ if (!images[product.image])
   description="Odkryj najnowsze trendy w czołowym miejscu mody w Polsce! Zakupy online kolekcji stylowych ubrań i akcesoriów na każdą okazję. Podnieś swoją garderobę dzięki modnym i wysokiej jakości produktom. Szybka wysyłka w całej Polsce. Kup teraz i wyraź swój unikatowy styl!"
 >
   <main transition:name={`photo-${String(product.id)}`} class="product-detail">
-    <a class="back-btn" href="/">X</a>
+    <button class="back-btn" onclick="history.back()">X</button>
 
     <div class="product-display">
       <div class="image">
@@ -81,6 +81,8 @@ if (!images[product.image])
     cursor: pointer;
     text-decoration: none;
     color: var(--main-dark);
+    padding: 0;
+    margin: 0;
   }
 
   .back-btn:hover,

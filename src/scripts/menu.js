@@ -1,11 +1,3 @@
-// document.getElementById("close-menu").addEventListener("click", function () {
-//   document.querySelector(".menu").classList.remove("expanded");
-// });
-
-// document.querySelector(".hamburger").addEventListener("click", () => {
-//   document.querySelector(".menu").classList.toggle("expanded");
-// });
-
 function attachMenuListeners() {
   const closeMenuButton = document.getElementById("close-menu");
   const hamburgerButton = document.querySelector(".hamburger");
