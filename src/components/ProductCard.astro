@@ -28,8 +28,7 @@ if (!images[image])
   </div>
   <div class="product-info">
     <h2>{name}</h2>
-    <p>{description}</p>
-    <span>Price: ${price}</span>
+    <span>Price: {price} zl</span>
   </div>
 </article>
 
@@ -66,8 +65,12 @@ if (!images[image])
     padding: 0.5rem;
     text-align: center;
     background-color: var(--main-pink);
+    color: var(--main-dark);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .product-info h2 {
@@ -76,8 +79,7 @@ if (!images[image])
   }
 
   .product-info p {
-    font-size: 0.8rem;
-    color: var(--secondary-dark);
+    font-size: 1rem;
     margin: 0;
   }
 

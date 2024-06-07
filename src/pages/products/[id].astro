@@ -5,6 +5,7 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import products from "../../data/products.json";
 import AddToCartForm from "../../components/cart/AddToCartButton";
+import QuantityButton from "../../components/cart/QuantityButton";
 
 export function getStaticPaths() {
   return products.map(({ id }) => ({ params: { id } }));
@@ -40,7 +41,16 @@ if (!images[product.image])
           <p class="description">{product.description}</p>
         </div>
         <div class="price-and-cart">
-          <span class="product-price">Price: ${product.price}</span>
+          <div class="qty-price">
+            <QuantityButton
+              client:load
+              initialQuantity={1}
+              maxQuantity={product.stock_quantity}
+              itemId={product.id}
+              itemDetails={product}
+            />
+            <span class="product-price">Price: {product.price} zl</span>
+          </div>
           <div class="buttons">
             <AddToCartForm item={product} client:load>
               <button type="submit" class="add-to-cart-btn" id="add-to-cart-btn"
@@ -112,12 +122,14 @@ if (!images[product.image])
     width: 100%;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 1rem;
   }
 
   .product-info {
     text-align: center;
     width: 100%;
     border-radius: 10px;
+    padding: 1rem;
   }
 
   .text {
@@ -148,6 +160,14 @@ if (!images[product.image])
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+
+  .qty-price {
+    display: flex;
+    flex-direction: column-reverse;
+    place-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
 
   .product-price {
@@ -195,13 +215,18 @@ if (!images[product.image])
     }
 
     .image {
-      max-width: 70%;
+      max-width: 85%;
     }
 
     .product-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    .text {
+      margin-top: 2rem;
     }
 
     .product-info h1 {
@@ -218,6 +243,7 @@ if (!images[product.image])
   @media (max-width: 768px) {
     .image {
       max-width: 100%;
+      margin-top: 2.5rem;
     }
     .product-display {
       flex-direction: row;
@@ -228,6 +254,10 @@ if (!images[product.image])
     .product-info {
       text-align: left;
       max-width: 600px;
+    }
+
+    .text {
+      margin-top: 0;
     }
 
     .description {

@@ -13,10 +13,10 @@ export default function CartButton() {
 
   return (
     <div className="cart">
+      {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
       <button className="cart-btn" onClick={() => isCartOpen.set(!$isCartOpen)}>
         <i className="fa-solid fa-cart-shopping"></i>
       </button>
-      {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
     </div>
   );
 }

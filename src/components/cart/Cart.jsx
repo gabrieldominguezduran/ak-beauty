@@ -1,11 +1,6 @@
 import { useStore } from "@nanostores/preact";
 import { useEffect } from "preact/hooks";
-import {
-  isCartOpen,
-  cartItems,
-  removeCartItem,
-  updateCartItemQuantity,
-} from "../../stores/cartStore";
+import { isCartOpen, cartItems, removeCartItem } from "../../stores/cartStore";
 import QuantityButton from "./QuantityButton";
 import "./styles/cartStyles.css";
 import "../../styles/global.css";
@@ -21,11 +16,6 @@ export default function Cart() {
       document.body.classList.remove("cart-open");
     }
   }, [$isCartOpen]);
-
-  const handleQuantityChange = (itemId, newQuantity) => {
-    console.log("New quantity:", newQuantity);
-    updateCartItemQuantity(itemId, newQuantity);
-  };
 
   return (
     <aside className="cart-slide">
@@ -45,22 +35,20 @@ export default function Cart() {
                   src={cartItem.image_public}
                   alt={cartItem.name}
                 />
-                <h3 className="item-name">{cartItem.name}</h3>
+                <div className="item-info">
+                  <p className="item-name">{cartItem.name}</p>
+                  <p className="item-price">
+                    <span>Total: </span>
+                    {cartItem.price * cartItem.quantity} zl
+                  </p>
+                </div>
                 <div className="qty-container">
                   <QuantityButton
                     initialQuantity={cartItem.quantity}
                     maxQuantity={cartItem.stock_quantity}
-                    onQuantityChange={(newQuantity) =>
-                      handleQuantityChange(cartItem.id, newQuantity)
-                    }
+                    itemId={cartItem.id}
+                    itemDetails={cartItem}
                   />
-                  <span className="stock-qty">
-                    {cartItem.stock_quantity === 1
-                      ? "Last item left"
-                      : `${
-                          cartItem.stock_quantity - cartItem.quantity
-                        } items left`}
-                  </span>
                 </div>
                 <button
                   className="trash-btn"
